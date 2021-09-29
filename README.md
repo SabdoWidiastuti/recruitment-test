@@ -1,2 +1,2 @@
 # recruitment-test
-Recruitment test flip
+Recruitment test React Native flip.id Sabdo Widiastuti
