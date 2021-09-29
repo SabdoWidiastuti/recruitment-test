@@ -1,0 +1,6 @@
+const ROUTE_NAMES = {
+    HOME_PAGE: 'HOME PAGE',
+    DETAIL_PAGE: 'DETAIL PAGE'
+}
+
+export {ROUTE_NAMES};
