@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    LogBox,
     Clipboard,
     Text,
     View
@@ -13,6 +14,7 @@ import { currency, dateFormat } from '../utils/Helper';
 const { colors, normalize } = AppTheme;
 
 function DetailTransaction({ route, navigation }) {
+    LogBox.ignoreAllLogs();
     const { params } = route;
     return (
         <View style={{ backgroundColor: colors.white }}>
