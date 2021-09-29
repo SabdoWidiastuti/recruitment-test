@@ -1,6 +1,5 @@
 # React Native Mobile Developer Recruitment Test
-Recruitment test React Native flip.id Sabdo Widiastuti
-This application developed by React Native 0.65.1. Prepared for Android and iOS.
+Recruitment test React Native flip.id Sabdo Widiastuti. This application developed by React Native 0.65.1. Prepared for Android and iOS.
 
 ### Foldering source code ('/src/')
 1. redux : this folder contains state management redux
