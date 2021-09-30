@@ -35,7 +35,8 @@ const styles =  StyleSheet.create({
     }, 
     inputText: {
         fontSize: normalize(13),
-        marginLeft: normalize(5)
+        marginLeft: normalize(5), 
+        color: colors.black
     }
 })
 
