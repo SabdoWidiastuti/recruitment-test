@@ -1,3 +1,4 @@
+// Currency format
 const currency = (value) => {
     if (value) {
         return "Rp " + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -6,6 +7,7 @@ const currency = (value) => {
     }
 }
 
+// Date format
 const dateFormat = (dateIn) => {
     var strSplitDate = String(dateIn).split(' ');
     var date = new Date(strSplitDate[0]);
@@ -23,9 +25,9 @@ const dateFormat = (dateIn) => {
     return date.toString();
 }
 
+// Convert data from object to array
 function objectToArray(data) {
     let dataObj = data;
-
     let dataArray = Object.keys(dataObj).map(key => {
         let obj = dataObj[key];
         obj.keyName = key;
@@ -33,6 +35,8 @@ function objectToArray(data) {
     })
     return dataArray;
 }
+
+// Sorting by field name
 function dynamicSort(property) {
     var sortOrder = 1;
 
@@ -50,6 +54,7 @@ function dynamicSort(property) {
     }
 }
 
+// Search data by keywoard
 function searchArray(data, searchText) {
     const newData = data.filter(item => {
         const name = item.beneficiary_name.toLowerCase();
@@ -57,7 +62,6 @@ function searchArray(data, searchText) {
         const textData = searchText.toLowerCase();
         return itemData.indexOf(textData) > -1;
     });
-
     return newData;
 }
 

@@ -54,7 +54,6 @@ function HomePage({ navigation }) {
         setSelectedSorting(dataSorting[0]);
     }, [])
 
-
     useEffect(() => {
         if (transaction.isLoading) {
             dispatch(getTransactionAsync());
@@ -78,6 +77,7 @@ function HomePage({ navigation }) {
 
     return (
         <View style={styles.container}>
+
             <View style={styles.containerHeader}>
                 <SearchBar onSearch={value => setSearchText(value)} />
                 <Sorting
@@ -86,6 +86,7 @@ function HomePage({ navigation }) {
                     onUpdate={(value) => setSelectedSorting(value)}
                 />
             </View>
+
             <FlatList
                 data={dataTransaction}
                 keyExtractor={item => item.keyName}
@@ -95,7 +96,7 @@ function HomePage({ navigation }) {
                         navigation={navigation}
                     />
                 }
-                ListFooterComponent={transaction.isLoading ? <ActivityIndicator /> : dataTransaction.length === 0 && <Text>Data tidak ditemukan</Text>}
+                ListFooterComponent={transaction.isLoading ? <ActivityIndicator /> : (dataTransaction.length === 0 && searchText && <Text>Data tidak ditemukan</Text>)}
             />
         </View>
     )

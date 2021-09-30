@@ -21,21 +21,20 @@ function SearchBar({ onSearch }) {
     )
 }
 
-const styles =  StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'row',
-        marginRight: normalize(10),
         alignItems: 'center',
         ...Platform.select({
             ios: {
                 paddingVertical: normalize(12)
             }
         })
-    }, 
+    },
     inputText: {
-        fontSize: normalize(13),
-        marginLeft: normalize(5), 
+        flex: 1,
+        marginHorizontal: normalize(5),
         color: colors.black
     }
 })

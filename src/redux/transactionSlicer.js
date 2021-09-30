@@ -1,14 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { objectToArray } from '../utils/Helper';
+import axios from 'axios';
 
 export const getTransactionAsync = createAsyncThunk(
     'transaction/getTransactionAsync',
     async () => {
-        const resp = await fetch('https://nextar.flip.id/frontend-test');
-
-        if (resp.ok) {
-            const transaction = await resp.json();
-            return { data: objectToArray(transaction) };
+        try {
+            const response = await axios.get('https://nextar.flip.id/frontend-test');
+            return { data: objectToArray(response.data) };
+        } catch (error) {
+            return { data: [] };
         }
     }
 );

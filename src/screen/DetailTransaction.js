@@ -14,7 +14,7 @@ import { currency, dateFormat } from '../utils/Helper';
 const { colors, normalize } = AppTheme;
 
 function DetailTransaction({ route, navigation }) {
-    LogBox.ignoreAllLogs();
+    LogBox.ignoreAllLogs(); //for ignore warning log clipboard
     const { params } = route;
     return (
         <View style={{ backgroundColor: colors.white }}>

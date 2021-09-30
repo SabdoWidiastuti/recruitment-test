@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     containerButton: {
         flexDirection: 'row',
         alignItems: 'center'
-    }, 
+    },
     containerCheckBox: {
         backgroundColor: 'transparent',
         borderColor: 'transparent',
@@ -63,7 +63,6 @@ const styles = StyleSheet.create({
         color: colors.primary,
         marginRight: normalize(5),
         fontWeight: 'bold',
-        fontSize: normalize(12)
     },
 })
 
